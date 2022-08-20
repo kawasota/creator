@@ -1,0 +1,87 @@
+@forward '../foundation/variable';
+@use '../foundation/variable' as v;
+
+@forward '../foundation/mixin';
+@use '../foundation/mixin' as m;
+
+@forward '../utility/length';
+@use '../utility/length'as l;
+
+
+/* common */
+img {
+  vertical-align: bottom;
+  width: 100%;
+  height: auto;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+.heading {
+  font-family: v.$font_b;
+  font-size: v.fs_a(60);
+  color: v.$color-skills-heading;
+  text-align: center;
+  text-shadow: 0.08em -0.06em v.$color-text-shadow_a, 0.09em -0.07em v.$color-text-shadow_b, 0.1em -0.05em v.$color-text-shadow_b, 0.07em -0.07em v.$color-text-shadow_b, 0.07em -0.07em v.$color-text-shadow_b, 0.06em -0.05em v.$color-text-shadow_b;
+
+  @include m.mq-down('sp') {
+    font-size: v.fs_a(95);
+  }
+}
+
+
+/* font */
+@font-face {
+  font-family: 'objective-bold';
+  src: url('../fonts/objective-bold-webfont.woff2') format('woff2') ;
+}
+
+@font-face {
+  font-family: 'objective-bold-italic';
+  src: url('../fonts/objective-bold-italic-webfont.woff2') format('woff2') ;
+}
+
+@font-face {
+  font-family: 'objective-medium';
+  src: url('../fonts/objective-medium-webfont.woff2') format('woff2') ;
+}
+
+
+/* スクロールの演出 */
+.fadeIn {
+  opacity: 0;
+  transition: all 3s v.$easeOutExpo;
+}
+
+.fadeIn.is-show {
+  opacity: 1;
+}
+
+.fadeIn_up {
+  opacity: 0;
+  transform: translate(0, 50%);
+  transition: all 1s v.$easeOutBack;
+}
+
+.fadeIn_up.is-show {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+.fadeIn_left {
+  opacity: 0;
+  transform: translate(-50%, 0);
+  transition: all 2s v.$easeOutQuint;
+}
+
+.fadeIn_left.is-show {
+  transform: translate(0, 0);
+  opacity: 1;
+}

@@ -1,0 +1,14 @@
+
+// foundation/common
+@use 'foundation/common';
+
+
+// index.html  - section ( top ~ contact )
+@use 'section/top';
+@use 'section/intro';
+@use 'section/skills';
+@use 'section/works';
+@use 'section/info';
+@use 'section/history';
+@use 'section/value';
+@use 'section/footer';

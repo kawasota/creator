@@ -1,0 +1,57 @@
+@forward '../foundation/variable';
+@use '../foundation/variable' as v;
+
+@forward '../utility/length';
+@use '../utility/length'as l;
+
+@forward '../foundation/mixin';
+@use '../foundation/mixin' as m;
+
+
+.intro {
+  margin-top: min( l.lg_a(254), 254px);
+  margin-bottom: min( l.lg_a(271), 271px);
+
+  &-container {
+    max-width: 815px;
+    width: l.lg_a(815);
+    margin: 0 auto;
+
+    @include m.mq-down('sp')  {
+      width: l.lg_b(368);
+    }
+  }
+
+    &-title {
+      text-align: center;
+      font-family: v.$font_d;
+      font-weight: bold;
+      font-size: v.fs_a(32);
+      color: v.$color-intro-title;
+      margin-left: max( l.lg_a(-23), -23px);
+
+      @include m.mq-down('sp') {
+        font-size: v.fs_b(18)
+      }
+    }
+
+    &-desc {
+      font-family: v.$font_d;
+      font-size: v.fs_a(24);
+      color: v.$color-intro-desc;
+      line-height: 2;
+      font-weight: 400;
+      margin-top: l.lg_a(33);
+
+      @include m.mq-down('sp') {
+        font-size: v.fs_b(11);
+        margin-top: l.lg_b(35);
+      }
+    }
+
+    .br {
+      @include m.mq-down('sp') {
+        display: none;
+      }
+    }
+}

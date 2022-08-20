@@ -1,0 +1,102 @@
+/* common */
+img {
+  vertical-align: bottom;
+  width: 100%;
+  height: auto;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: inherit;
+  vertical-align: middle;
+  text-align: inherit;
+  font: inherit;
+  appearance: none;
+}
+
+.top-header-container {
+  width: min(78.4375vw,1004px);
+  margin: 0 auto;
+}
+
+.top-header-mail-icon {
+  width: 5%;
+}
+
+.top-mainvisual-container {
+  width: min(78.4375vw,1004px);
+  margin: 0 auto;
+}
+
+.top-mainvisual-img {
+  width: calc(50% + 50vw);
+  display: block;
+}
+
+.top-desc-container {
+  background-color: #2A84AC;
+}
+
+.top-desc-copy {
+  width: 60.078125vw;
+  margin: 0 auto;
+}
+
+.top-desc-service {
+  width: 60.078125vw;
+  margin: 0 auto;
+}
+
+.point {
+  background: #2A84AC;
+}
+
+.point-feature-container {
+  width: min(78.4375vw,1004px);
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 15.625vw;
+}
+
+.point-feature {
+  display: flex;
+}
+
+.point-desc-container_outside {
+  background: linear-gradient(10deg, #fff 0, #fff 53%, transparent 50%, transparent 100%);
+}
+
+.point-desc-container_inside {
+  width: min(78.4375vw,1004px);
+  margin: 0 auto;
+  padding-top: 15.625vw;
+}
+
+.point-desc-bg_img {
+  background: image-set(url(../img/point-eyecatch.webp) 1x, url(../img/point-eyecatch@2x.webp) 2x, url(../img/point-eyecatch@3x.webp) 3x, url(../img/point-eyecatchice@4x.webp) 4x) no-repeat;
+  background: -webkit-image-set(url(../img/point-eyecatch.webp) 1x, url(../img/point-eyecatch@2x.webp) 2x, url(../img/point-eyecatch@3x.webp) 3x, url(../img/point-eyecatch@4x.webp) 4x) no-repeat;
+  background-position: 0% 100%;
+  background-size: calc(50% + 50vw);
+  padding-top: 15.625vw;
+  padding-right: calc(50% + 50vw);
+}
+
+.service-container {
+  width: min(78.4375vw,1004px);
+  margin: 0 auto;
+  padding-top: 15.625vw;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,14 @@
+@forward '../foundation/variable';
+@use '../foundation/variable' as v;
+
+@forward '../utility/length';
+@use '../utility/length'as l;
+
+@forward '../foundation/mixin';
+@use '../foundation/mixin' as m;
+
+
+.footer {
+  background: v.$color-footer-background;
+  padding-top: min(l.lg_a(340), 340px);
+}

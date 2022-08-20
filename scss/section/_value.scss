@@ -1,0 +1,92 @@
+@forward '../foundation/variable';
+@use '../foundation/variable' as v;
+
+@forward '../utility/length';
+@use '../utility/length'as l;
+
+@forward '../foundation/mixin';
+@use '../foundation/mixin' as m;
+
+
+.value {
+  background: v.$color-value-background;
+
+  &-container_first {
+    max-width: 668px;
+    width: l.lg_a(668);
+    margin: 0 auto;
+    padding-top: min(l.lg_a(226), 226px);
+    padding-bottom: min(l.lg_a(118), 118px);
+  }
+
+    &-title {
+      text-align: center;
+      font-size: v.fs_a(24);
+      font-family: v.$font_b;
+      color: v.$color-value-title;
+    }
+
+    &-copy {
+      font-size: v.fs_a(48);
+      font-family: v.$font_d;
+      color: v.$color-value-copy;
+      width: min(l.lg_a(671), 671px);
+      font-weight: 400;
+      padding-top: min(l.lg_a(23), 23px);
+      line-height: 1.7;
+    }
+
+  &-swiper {
+    overflow: hidden;
+  }
+
+    .swiper-container  {
+      width: min(l.lg_a(733), 733px);
+      margin: 0 auto;
+      overflow: visible;
+    }
+
+  &-bg_img {
+    background: image-set(url(../img/value_bg.webp) 1x, url(../img/value_bg@2x.webp) 2x,  url(../img/value_bg@3x.webp) 3x, url(../img/value_bg@4x.webp) 4x) no-repeat center;
+    background: -webkit-image-set(url(../img/value_bg.webp) 1x,url(../img/value_bg@2x.webp) 2x,url(../img/value_bg@3x.webp) 3x,url(../img/value_bg@4x.webp) 4x) no-repeat center;
+    background-size: cover;
+    padding-bottom: min(l.lg_a(260), 260px);
+    position: relative;
+
+  &:after {
+    content: '';
+    background-color: v.$color-value-background;
+    opacity: 0.91;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+  }
+
+    &-container_third {
+      max-width: 818px;
+      width: l.lg_a(818);
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+      padding-top: min(l.lg_a(195), 195px);
+    }
+
+      &-desc {
+        font-size: v.fs_a(20);
+        font-family: v.$font_d;
+        color: v.$color-value-desc;
+        font-weight: 400;
+        line-height: 2;
+      }
+}
+
+  .no-webp .value-bg_img {
+    background: url(/img/value_bg.jpg) no-repeat center;
+    background: image-set(url(/img/value_bg.jpg) 1x, url(/img/value_bg@2x.jpg) 2x,  url(/img/value_bg@3x.jpg) 3x, url(/img/value_bg@4x.jpg) 4x) no-repeat center;
+    background: -webkit-image-set(url(/img/value_bg.jpg) 1x, url(/img/value_bg@2x.jpg) 2x,  url(/img/value_bg@3x.jpg) 3x, url(/img/value_bg@4x.jpg) 4x) no-repeat center;
+    background-size: cover;
+    padding-bottom: min(l.lg_a(655), 655px);
+  }

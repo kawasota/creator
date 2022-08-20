@@ -1,0 +1,123 @@
+
+// * Font * //
+// * Color * //
+// * Easing * //
+// * Media Query * //
+
+
+////////////// Font ////////////// 
+
+// - Font A
+$font_a: 'objective-bold', sans-serif;
+
+// - Font B
+$font_b: 'objective-bold-italic', sans-serif;
+
+// - Font C
+$font_c: 'objective-medium', sans-serif;
+
+// - Font D
+$font_d: 'Noto Sans JP', sans-serif;
+
+
+// Font size patarn A
+@function fs_a($value) {
+  $value_var: #{ 100 / 1280 * $value } + vw;
+  $value_max: $value + px;
+  @return min(#{$value_var},#{$value_max});
+}
+
+// Font size patarn B
+@function fs_b($value) {
+  $value_var: #{ 100 / 554 * $value } + vw;
+  @return #{$value_var};
+}
+
+
+
+////////////// Color ////////////// 
+
+// Palette
+$palette-white: #FFFFFF;
+$palette-bermuda: #7AD6BB;
+$palette-dovegray: #707070;
+$palette-concrete: #F2F2F2;
+$palette-black: #000000;
+$palette-gallery:#F0F0F0;
+$palette-mineshaft: #262626;
+$palette-tundora: #454545;
+$palette-alto: #DEDEDE;
+$palette-mineshaft_b: #212121;
+$palette-mineshaft_c: #222222;
+
+
+// Color of section
+
+// common
+$color-text-shadow_a: $palette-concrete;
+$color-text-shadow_b: $palette-bermuda;
+
+// - top
+$color-top-logo: $palette-white;
+$color-top-copy: $palette-bermuda;
+
+// - intro
+$color-intro-title: $palette-black;
+$color-intro-desc: $palette-tundora;
+
+// - skills
+$color-skills-background: $palette-concrete;
+$color-skills-background_text: $palette-white;
+$color-skills-heading: $palette-black;
+$color-skills-background_deco: $palette-bermuda;
+$color-skills-title: $palette-tundora;
+$color-skills-number: $palette-black;
+$color-skills-desc: $palette-tundora;
+
+// - works
+$color-works-borderleft: $palette-dovegray;
+$color-works-add: $palette-bermuda;
+$color-works-circle: $palette-bermuda;
+$color-works-circle_background: $palette-white;
+$color-works-time: $palette-tundora;
+$color-works-desc: $palette-tundora;
+$color-works-mind_title: $palette-tundora;  
+$color-works-mind_desc: $palette-tundora;
+
+// - info
+$color-info-background: $palette-gallery;
+$color-info-title: $palette-tundora;
+$color-info-number: $palette-black;
+$color-info-desc: $palette-tundora;
+$color-info-background_deco: $palette-bermuda;
+
+// - history
+$color-history-table_border_a: $palette-bermuda;
+$color-history-table_border_b: $palette-dovegray;
+$color-history-time: $palette-bermuda;
+$color-history-desc: $palette-mineshaft_c;
+
+// - value
+$color-value-background: $palette-mineshaft;
+$color-value-title: $palette-bermuda;
+$color-value-copy: $palette-white;
+$color-value-desc: $palette-white;
+
+// - footer
+$color-footer-background: $palette-bermuda;
+
+
+
+//////////////  Easing //////////////
+
+$easeOutExpo:    cubic-bezier(0.19,  1,     0.22,  1    );
+$easeOutBack:    cubic-bezier(0.175, 0.885, 0.32,  1.275);
+$easeOutQuint:   cubic-bezier(0.23,  1,     0.32,  1    );
+
+
+////////////// Media Query ////////////// 
+
+$breakpoint-down: (
+"sp": "(max-width: 554px)"
+);
+
